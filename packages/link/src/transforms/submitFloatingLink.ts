@@ -31,6 +31,7 @@ export const submitFloatingLink = <V extends Value>(editor: PlateEditor<V>) => {
 
   floatingLinkActions.hide();
 
+  // upsert: 更新插入
   upsertLink(editor, {
     skipValidation: true,
     target,

@@ -69,6 +69,7 @@ export default function HomeTabs() {
 
         <TabsContent className="pt-2" value="playground">
           <div className="max-w-[1336px] rounded-lg border bg-background shadow">
+            {/* 编辑器 */}
             <PlaygroundDemo />
           </div>
         </TabsContent>

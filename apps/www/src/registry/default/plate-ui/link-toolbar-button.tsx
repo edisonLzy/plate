@@ -12,6 +12,7 @@ import { ToolbarButton } from './toolbar';
 
 export const LinkToolbarButton = withRef<typeof ToolbarButton>((rest, ref) => {
   const state = useLinkToolbarButtonState();
+  // 获取 link toolbar button 的 props
   const { props } = useLinkToolbarButton(state);
 
   return (

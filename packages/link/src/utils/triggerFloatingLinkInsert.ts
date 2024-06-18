@@ -40,7 +40,7 @@ export const triggerFloatingLinkInsert = <V extends Value>(
   });
 
   if (hasLink) return;
-
+  // 设置 link text 到 store
   floatingLinkActions.text(getEditorString(editor, editor.selection));
   floatingLinkActions.show('insert', editor.id);
 

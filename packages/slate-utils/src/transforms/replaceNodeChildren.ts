@@ -23,6 +23,7 @@ export interface ReplaceNodeChildrenOptions<
 }
 
 /** Replace node children: remove then insert. */
+// 替换Node的children
 export const replaceNodeChildren = <
   N extends EElementOrText<V>,
   V extends Value = Value,
@@ -31,8 +32,9 @@ export const replaceNodeChildren = <
   { at, insertOptions, nodes, removeOptions }: ReplaceNodeChildrenOptions<N, V>
 ) => {
   withoutNormalizing(editor, () => {
+    // 删除Node的children
     removeNodeChildren(editor, at, removeOptions);
-
+    // 插入新的children
     insertNodes(editor, nodes, {
       ...insertOptions,
       at: at.concat([0]),

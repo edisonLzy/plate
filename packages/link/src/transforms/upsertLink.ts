@@ -74,6 +74,7 @@ export const upsertLink = <V extends Value>(
   }
   // edit the link url and/or target
   if (linkAbove) {
+    // 更新 link attributes
     if (url !== linkAbove[0]?.url || target !== linkAbove[0]?.target) {
       setNodes<TLinkElement>(
         editor,
@@ -83,7 +84,7 @@ export const upsertLink = <V extends Value>(
         }
       );
     }
-
+    // 更新 link text
     upsertLinkText(editor, { target, text, url });
 
     return true;

@@ -10,6 +10,7 @@ import type { TEditor, Value } from './TEditor';
  * Note: by default the text of void nodes is considered to be an empty string,
  * regardless of content, unless you pass in true for the voids option
  */
+
 export const getEditorString = <V extends Value>(
   editor: TEditor<V>,
   at: Location | null | undefined,
@@ -18,6 +19,7 @@ export const getEditorString = <V extends Value>(
   if (!at) return '';
 
   try {
+    // 获取 editor 中指定位置的字符串
     return Editor.string(editor as any, at, options);
   } catch (error) {
     return '';

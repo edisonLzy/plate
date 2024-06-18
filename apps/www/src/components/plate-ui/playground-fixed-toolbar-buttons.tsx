@@ -40,6 +40,7 @@ import { PlaygroundModeDropdownMenu } from './playground-mode-dropdown-menu';
 import { PlaygroundMoreDropdownMenu } from './playground-more-dropdown-menu';
 import { PlaygroundTurnIntoDropdownMenu } from './playground-turn-into-dropdown-menu';
 
+// 固定工具栏
 export function PlaygroundFixedToolbarButtons({ id }: { id?: ValueId }) {
   const readOnly = useEditorReadOnly();
   const indentList = settingsStore.use.checkedId(KEY_LIST_STYLE_TYPE);

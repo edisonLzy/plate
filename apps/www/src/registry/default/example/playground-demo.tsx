@@ -164,6 +164,7 @@ export const usePlaygroundPlugins = ({
           createBlockquotePlugin({ enabled: !!enabled.blockquote }),
           createCodeBlockPlugin({ enabled: !!enabled.code_block }),
           createHorizontalRulePlugin({ enabled: !!enabled.hr }),
+          // 注册插件
           createLinkPlugin({ ...linkPlugin, enabled: !!enabled.a }),
           createListPlugin({
             enabled: id === 'list' || !!enabled.list,
